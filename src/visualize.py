@@ -11,7 +11,6 @@ def main():
 
     epochs = range(1, len(history["train_loss"]) + 1)
 
-    # LOSS
     plt.figure()
     plt.plot(epochs, history["train_loss"], label="train")
     plt.plot(epochs, history["val_loss"], label="val")
@@ -21,7 +20,6 @@ def main():
     plt.savefig("outputs/plots/loss.png")
     plt.close()
 
-    # ACCURACY
     plt.figure()
     plt.plot(epochs, history["train_acc"], label="train")
     plt.plot(epochs, history["val_acc"], label="val")
