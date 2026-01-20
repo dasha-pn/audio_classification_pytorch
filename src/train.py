@@ -38,7 +38,6 @@ def main():
     best_val_loss = float("inf")
 
     for epoch in range(1, 21):
-        # ---- TRAIN ----
         model.train()
         correct, total, running_loss = 0, 0, 0.0
 
@@ -59,7 +58,6 @@ def main():
         train_loss = running_loss / total
         train_acc = correct / total
 
-        # ---- VALIDATION ----
         model.eval()
         correct, total, running_loss = 0, 0, 0.0
 
